@@ -95,3 +95,7 @@ set(INCS ${CMAKE_CURRENT_SOURCE_DIR}/interface/
 set(INERTFACES ${CMAKE_CURRENT_SOURCE_DIR}/interface/)
 
 __add_platform_library(qrlib)
+
+if(CC_INSTALL_QRLIB)
+	__install_directory_specif(${CMAKE_CURRENT_SOURCE_DIR}/interface/ qrlib)
+endif()
